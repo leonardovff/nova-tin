@@ -30,12 +30,6 @@
     "carcrud": {
       "tags": []
     },
-    "carcrud-e2e": {
-      "tags": [],
-      "implicitDependencies": [
-        "carcrud"
-      ]
-    },
     "api": {
       "tags": []
     },
