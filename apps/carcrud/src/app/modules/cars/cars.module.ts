@@ -13,6 +13,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatDialogModule} from '@angular/material/dialog';
+import {MatCardModule} from '@angular/material/card';
 
 
 import { ListComponent } from './components/list/list.component';
@@ -43,7 +44,7 @@ const routes: Routes = [
     MatListModule, MatButtonModule, MatIconModule,
     MatFormFieldModule, MatSelectModule, MatInputModule,
     MatCheckboxModule, MatSnackBarModule, MatProgressSpinnerModule,
-    MatDialogModule,
+    MatDialogModule,MatCardModule,
     RouterModule.forChild(routes),
   ]
 })

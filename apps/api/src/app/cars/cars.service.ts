@@ -11,12 +11,16 @@ export class CarsService {
   }
   find(filters): Car[] {
     return this.cars.filter(car => {
+      let flag = true;
       for (const key in filters) {
         if (filters.hasOwnProperty(key)) {
           const element = filters[key];
-          return car[key] == element;
+          if(car[key] != element){
+            flag = false;
+          };
         }
       }
+      return flag;
     });
   }
   findById(id: number): Car {

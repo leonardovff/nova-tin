@@ -3,3 +3,6 @@ button[mat-fab]{
   bottom: 5%;
   right: 5%;
 }
+h2{
+  text-align: center;
+}

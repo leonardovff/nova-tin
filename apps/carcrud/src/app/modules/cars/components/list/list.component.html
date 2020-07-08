@@ -1,3 +1,27 @@
+<h2>Listagem de carros</h2>
+<mat-card>
+  Quantidade de carros não vendidos:
+  {{info?.nao_vendido}}
+</mat-card>
+
+<mat-card>
+  Quantidade de carros por marca:
+ <ul>
+   <li *ngFor="let fabricante of info?.fabricantes">
+     {{fabricante?.key}}: {{fabricante.value}}
+   </li>
+ </ul>
+</mat-card>
+
+<mat-card>
+  Quantidade de carros por decada:
+ <ul>
+   <li *ngFor="let decada of info?.decadas">
+     {{decada?.key}}0: {{decada.value}}
+   </li>
+ </ul>
+</mat-card>
+
 <mat-list>
   <mat-list-item *ngFor="let car of cars | async">
     <h3 matLine> {{car.veiculo}} - {{car.ano}} - {{car.vendido ? 'Vendido' : 'Não vendido'}} </h3>
