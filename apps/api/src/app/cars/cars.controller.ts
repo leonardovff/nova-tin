@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Param, Post, UseGuards, Put, Patch, Delete } from '@nestjs/common';
+import { Body, Controller, Get, Param, Post, UseGuards, Put, Patch, Delete, Query } from '@nestjs/common';
 import { ParseIntPipe } from './pipes/parse-int.pipe';
 import { CarsService } from './cars.service';
 import { CreateCarDto } from './create-car.dto';
@@ -11,6 +11,13 @@ export class CarsController {
   @Get()
   async findAll(): Promise<Car[]> {
     return this.carsService.findAll();
+  }
+  @Get('find')
+  async findAllWithFilters(
+    @Query() query
+  ): Promise<Car[]> {
+    console.log(query)
+    return this.carsService.find(query);
   }
 
   @Get(':id')

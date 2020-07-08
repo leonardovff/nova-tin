@@ -9,7 +9,16 @@ export class CarsService {
   findAll(): Car[] {
     return this.cars;
   }
-
+  find(filters): Car[] {
+    return this.cars.filter(car => {
+      for (const key in filters) {
+        if (filters.hasOwnProperty(key)) {
+          const element = filters[key];
+          return car[key] == element;
+        }
+      }
+    });
+  }
   findById(id: number): Car {
     return this.cars.find(car => car.id == id);
   }

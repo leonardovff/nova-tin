@@ -33,6 +33,12 @@ export class ListComponent implements OnInit {
       finalize (() => this.isLoading = false)
     );
   }
+  captureInfos(){
+    this.http.get<Car>('/api/cars')
+    .pipe(
+      finalize (() => this.isLoading = false)
+    );
+  }
   openModalDelete(id) {
     this.idToDelete = id;
     const dialogRef = this.dialog.open(this.modalDelete, {
