@@ -34,7 +34,7 @@ Open in the browser: localhost:4200
 
 ### Obs: API router in http://localhost:4200/api/cars or http://localhost:3333/api/cars
 
-## Ro run to prod
+## Run in prod
 Run `nx build carcrud && npx http-server ./dist/apps/carcrud/` to build and run the spa client.
 
 Run `nx build api && node ./dist/apps/api/main.js` to build and run the api.
