@@ -274,6 +274,57 @@
           }
         }
       }
+    },
+    "recreation-queue": {
+      "root": "apps/recreation-queue",
+      "sourceRoot": "apps/recreation-queue/src",
+      "projectType": "application",
+      "prefix": "recreation-queue",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@nrwl/node:build",
+          "options": {
+            "outputPath": "dist/apps/recreation-queue",
+            "main": "apps/recreation-queue/src/main.ts",
+            "tsConfig": "apps/recreation-queue/tsconfig.app.json"
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "extractLicenses": true,
+              "inspect": false
+            }
+          }
+        },
+        "serve": {
+          "builder": "@nrwl/node:execute",
+          "options": {
+            "buildTarget": "recreation-queue:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/recreation-queue/tsconfig.app.json",
+              "apps/recreation-queue/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/recreation-queue/**/*"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/recreation-queue/jest.config.js",
+            "tsConfig": "apps/recreation-queue/tsconfig.spec.json",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": {
