@@ -73,7 +73,6 @@ export class ListComponent implements OnInit {
     }))
 
     this.info = info;
-    console.log(this.info);
   }
   openModalDelete(id) {
     this.idToDelete = id;

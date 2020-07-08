@@ -59,7 +59,6 @@ export class FormComponent implements OnInit {
     })
   }
   save() {
-    console.log(this.id);
     if(!this.form.valid) return false;
     this.isLoading = true;
 

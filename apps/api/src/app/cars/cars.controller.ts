@@ -16,7 +16,6 @@ export class CarsController {
   async findAllWithFilters(
     @Query() query
   ): Promise<Car[]> {
-    console.log(query)
     return this.carsService.find(query);
   }
 
