@@ -1,10 +1,39 @@
 # Testetinnova
 
 This project was generated using [Nx](https://nx.dev).
-
-<p align="center"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="450"></p>
-
 🔎 **Nx is a set of Extensible Dev Tools for Monorepos.**
+
+## Installation
+Run `npm install` to install the dependencies.
+Run `npm install -g @nrwl/cli` to install the cli for monorepos.
+
+
+## Run conveter
+Run `nx serve converter` to run the converter and make the conversion.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Quick Start & Documentation
 
