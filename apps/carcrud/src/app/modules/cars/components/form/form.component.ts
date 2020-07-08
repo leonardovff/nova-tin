@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { Router, ActivatedRoute } from '@angular/router';
 
@@ -34,11 +34,11 @@ export class FormComponent implements OnInit {
     private _snackBar: MatSnackBar
   ) {
     this.form = new FormGroup({
-      veiculo: new FormControl(''),
-      marca: new FormControl(''),
-      ano: new FormControl(null),
-      descricao: new FormControl(''),
-      vendido: new FormControl(false),
+      veiculo: new FormControl('', [Validators.required]),
+      marca: new FormControl('', [Validators.required]),
+      ano: new FormControl(null, [Validators.required]),
+      descricao: new FormControl('', [Validators.required]),
+      vendido: new FormControl(false, [Validators.required]),
     });
   }
 

@@ -23,3 +23,18 @@ Run `nx build recreation-queue && node ./dist/apps/recreation-queue/main.js` to 
 Run `nx test recreation-queue` to run the tests from recreation queue project.
 
 Run `nx serve recreation-queue` to run the teste server for recreation queue project.
+
+
+## Run car crud: spa client and api 
+Run `nx serve carcrud` to run the test server for spa client.
+
+Run `nx serve api` to run the test server for api client.
+
+Open in the browser: localhost:4200
+
+### Obs: API router in http://localhost:4200/api/cars or http://localhost:3333/api/cars
+
+## Ro run to prod
+Run `nx build carcrud && npx http-server ./dist/apps/carcrud/` to build and run the spa client.
+
+Run `nx build api && node ./dist/apps/api/main.js` to build and run the api.
