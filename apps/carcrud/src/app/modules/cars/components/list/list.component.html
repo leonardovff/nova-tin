@@ -9,5 +9,33 @@
       [aria-label]="'Edit the car ' + car.id">
       <mat-icon>edit</mat-icon>
     </button>
+    <button
+      mat-icon-button
+      color="primary"
+      (click)="openModalDelete(car.id)"
+      [aria-label]="'Edit the car ' + car.id">
+      <mat-icon>delete</mat-icon>
+    </button>
   </mat-list-item>
 </mat-list>
+
+<button
+  mat-fab
+  color="primary"
+  [routerLink]="['./add']">
+  <mat-icon>add</mat-icon>
+</button>
+
+<ng-template #modalDelete>
+  <h1 mat-dialog-title>Confirmação de exclusão</h1>
+  <div mat-dialog-content>
+    <p>Você confirma a exclusão do carro de número {{idToDelete}}?</p>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-button mat-dialog-close>Cancelar</button>
+    <button mat-button mat-dialog-close (click)="confirmDelete(idToDelete)" cdkFocusInitial>Confirmar</button>
+  </div>
+</ng-template>
+
+<testetinnova-load-feedback *ngIf="isLoading">
+</testetinnova-load-feedback>

@@ -1,3 +1,4 @@
+<h2>{{title}}</h2>
 <form (ngSubmit)="save()" [formGroup]="form">
   <mat-form-field appearance="fill">
     <mat-label>Veiculo</mat-label>
@@ -26,13 +27,16 @@
   </mat-form-field>
 
   <br>
-  <mat-checkbox formControlName="vendido">Vendido</mat-checkbox>
+  <div id="vendidoCheck">
+    <mat-checkbox formControlName="vendido">Vendido</mat-checkbox>
+  </div>
 
   <br>
-  <button mat-stroked-button color="primary">Salvar</button>
+  <div class="actions">
+    <a routerLink=".." mat-stroked-button color="warn">Cancelar</a>
+    <button mat-stroked-button color="primary">Salvar</button>
+  </div>
 </form>
 
-
-<div [class.isLoading]="isLoading">
-  <mat-spinner></mat-spinner>
-</div>
+<testetinnova-load-feedback *ngIf="isLoading">
+</testetinnova-load-feedback>

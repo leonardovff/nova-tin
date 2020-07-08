@@ -25,6 +25,7 @@ export class FormComponent implements OnInit {
   form: FormGroup;
   id: number;
   endpoint: string = '/api/cars';
+  title: string = '';
 
   constructor(
     private http: HttpClient,
@@ -43,8 +44,10 @@ export class FormComponent implements OnInit {
 
   ngOnInit(): void {
     this.activedRoute.params.subscribe(params => {
+      this.title = "Cadastro de carro";
       this.id = params.id ? params.id : null;
       if(this.id){
+        this.title = "Edição de carro";
         this.isLoading = true;
         this.http.get( `${this.endpoint}/${this.id}`)
           .toPromise()
@@ -64,24 +67,26 @@ export class FormComponent implements OnInit {
       return this.handleRequest(this.http.post(
         this.endpoint,
         this.form.value
-      ), 'Carro editado');
+      ), 'Carro cadastrado');
     }
 
     this.handleRequest(this.http.patch(
         `${this.endpoint}/${this.id}`,
         this.form.value
-      ), 'Carro cadastrado');
+      ), 'Carro atualizado');
   };
   handleRequest(request, msg){
     this.isLoading = true;
     request
       .toPromise()
       .then(() => {
-        this._snackBar.open(msg, null, {
-          duration: 2000,
-        });
         this.isLoading = false;
         this.router.navigate(['..'], {relativeTo: this.activedRoute})
+        setTimeout(() => {
+          this._snackBar.open(msg, null, {
+            duration: 2000,
+          });
+        }, 150);
       })
   }
 

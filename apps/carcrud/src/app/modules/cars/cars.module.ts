@@ -12,10 +12,12 @@ import {MatInputModule} from '@angular/material/input';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 import { ListComponent } from './components/list/list.component';
 import { FormComponent } from './components/form/form.component';
+import { LoadFeedbackComponent } from './components/load-feedback/load-feedback.component';
 
 
 const routes: Routes = [
@@ -34,13 +36,14 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [ListComponent, FormComponent],
+  declarations: [ListComponent, FormComponent, LoadFeedbackComponent],
   imports: [
     CommonModule,
     ReactiveFormsModule,
     MatListModule, MatButtonModule, MatIconModule,
     MatFormFieldModule, MatSelectModule, MatInputModule,
     MatCheckboxModule, MatSnackBarModule, MatProgressSpinnerModule,
+    MatDialogModule,
     RouterModule.forChild(routes),
   ]
 })
