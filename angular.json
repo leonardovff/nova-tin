@@ -224,19 +224,19 @@
         }
       }
     },
-    "converter": {
-      "root": "apps/converter",
-      "sourceRoot": "apps/converter/src",
+    "convert": {
+      "root": "apps/convert",
+      "sourceRoot": "apps/convert/src",
       "projectType": "application",
-      "prefix": "converter",
+      "prefix": "convert",
       "schematics": {},
       "architect": {
         "build": {
           "builder": "@nrwl/node:build",
           "options": {
-            "outputPath": "dist/apps/converter",
-            "main": "apps/converter/src/main.ts",
-            "tsConfig": "apps/converter/tsconfig.app.json"
+            "outputPath": "dist/apps/convert",
+            "main": "apps/convert/src/main.ts",
+            "tsConfig": "apps/convert/tsconfig.app.json"
           },
           "configurations": {
             "production": {
@@ -249,27 +249,27 @@
         "serve": {
           "builder": "@nrwl/node:execute",
           "options": {
-            "buildTarget": "converter:build"
+            "buildTarget": "convert:build"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "apps/converter/tsconfig.app.json",
-              "apps/converter/tsconfig.spec.json"
+              "apps/convert/tsconfig.app.json",
+              "apps/convert/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**",
-              "!apps/converter/**/*"
+              "!apps/convert/**/*"
             ]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
           "options": {
-            "jestConfig": "apps/converter/jest.config.js",
-            "tsConfig": "apps/converter/tsconfig.spec.json",
+            "jestConfig": "apps/convert/jest.config.js",
+            "tsConfig": "apps/convert/tsconfig.spec.json",
             "passWithNoTests": true
           }
         }

@@ -1,4 +1,4 @@
-export const ConverterFarenheitToCelsius = (farenheit: number) => {
+export const ConvertFarenheitToCelsius = (farenheit: number) => {
   if(isNaN(farenheit)){
     return false;
   }

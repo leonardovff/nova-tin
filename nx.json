@@ -42,7 +42,7 @@
     "api-interfaces": {
       "tags": []
     },
-    "converter": {
+    "convert": {
       "tags": []
     }
   }

@@ -9,7 +9,7 @@ Run `npm install -g @nrwl/cli` to install the cli for monorepos.
 
 
 ## Run conveter
-Run `nx serve converter` to run the converter and make the conversion.
+Run `nx serve convert` to run the convert and make the conversion.
 
 
 
