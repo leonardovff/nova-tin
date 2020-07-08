@@ -1,1 +1,30 @@
-<p>form works!</p>
+<form action="">
+  <mat-form-field appearance="fill">
+    <mat-label>Veiculo</mat-label>
+    <input matInput>
+  </mat-form-field>
+  <br>
+  <mat-form-field appearance="fill">
+    <mat-label>Marca</mat-label>
+    <mat-select>
+      <mat-option *ngFor="let brand of brands" [value]="brand">{{brand}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <br>
+  <mat-form-field appearance="fill">
+    <mat-label>Ano</mat-label>
+    <mat-select>
+      <mat-option *ngFor="let year of years" [value]="year">{{year}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <br>
+  <mat-form-field appearance="fill">
+    <mat-label>Descrição</mat-label>
+    <textarea matInput></textarea>
+  </mat-form-field>
+
+  <br>
+  <mat-checkbox>Vendido</mat-checkbox>
+</form>

@@ -3,8 +3,9 @@ import { Routes, RouterModule } from '@angular/router'; // CLI imports router
 
 const routes: Routes = [
   {
-    path: '', loadChildren: () => import('./modules/cars/cars.module').then(m => m.CarsModule)
-  }
+    path: 'cars', loadChildren: () => import('./modules/cars/cars.module').then(m => m.CarsModule)
+  },
+  { path: '**', redirectTo: 'cars'}
 ];
 
 @NgModule({

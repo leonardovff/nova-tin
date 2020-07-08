@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ListComponent implements OnInit {
 
-  hello$ = this.http.get<Car>('/api/cars');
+  cars = this.http.get<Car>('/api/cars');
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {

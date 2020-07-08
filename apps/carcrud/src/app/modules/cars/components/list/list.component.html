@@ -1,1 +1,13 @@
-<p>list works!</p>
+<mat-list>
+  <mat-list-item *ngFor="let car of cars | async">
+    <h3 matLine> {{car.veiculo}} - {{car.ano}} - {{car.vendido ? 'Vendido' : 'Não vendido'}} </h3>
+    <p matLine> {{car.marca}} </p>
+    <button
+      mat-icon-button
+      color="primary"
+      [routerLink]="['./' + car.id]"
+      [aria-label]="'Edit the car ' + car.id">
+      <mat-icon>edit</mat-icon>
+    </button>
+  </mat-list-item>
+</mat-list>
