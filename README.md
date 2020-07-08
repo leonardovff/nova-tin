@@ -9,7 +9,9 @@ Run `npm install -g @nrwl/cli` to install the cli for monorepos.
 
 
 ## Run conveter
-Run `nx serve convert` to run the convert and make the conversion.
+Run `nx serve convert` to run the teste server for convert project.
+Run `nx test convert` to run the tests from convert project.
+Run `nx build convert && node ./dist/apps/convert/main.js` to build and run the convert project.
 
 
 
@@ -30,8 +32,7 @@ Run `nx serve convert` to run the convert and make the conversion.
 
 
 
-
-
+------------------------
 
 
 

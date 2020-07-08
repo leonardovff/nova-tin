@@ -8,7 +8,6 @@ const rl = readline.createInterface({
 });
 
 console.log("Calculadora de farenheit para celsius")
-
 rl.question("Qual número deve ser convertido? ", function(input) {
   rl.close();
   const farenheit = Number(input);
