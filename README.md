@@ -32,7 +32,7 @@ Run `nx serve api` to run the test server for api client.
 
 Open in the browser: localhost:4200
 
-### Obs: API router in http://localhost:4200/api/cars or http://localhost:3333/api/cars
+### Obs: API endpoint in http://localhost:4200/api/cars or http://localhost:3333/api/cars
 
 ## Run in prod
 Run `nx build carcrud && npx http-server ./dist/apps/carcrud/` to build and run the spa client.
