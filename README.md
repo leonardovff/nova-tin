@@ -5,12 +5,15 @@ This project was generated using [Nx](https://nx.dev).
 
 ## Installation
 Run `npm install` to install the dependencies.
+
 Run `npm install -g @nrwl/cli` to install the cli for monorepos.
 
 
 ## Run conveter
 Run `nx serve convert` to run the teste server for convert project.
+
 Run `nx test convert` to run the tests from convert project.
+
 Run `nx build convert && node ./dist/apps/convert/main.js` to build and run the convert project.
 
 
