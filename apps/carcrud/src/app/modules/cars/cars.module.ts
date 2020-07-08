@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import {MatIconModule} from '@angular/material/icon';
 import {MatListModule} from '@angular/material/list';
@@ -9,6 +10,9 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
 import {MatInputModule} from '@angular/material/input';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+
 
 import { ListComponent } from './components/list/list.component';
 import { FormComponent } from './components/form/form.component';
@@ -33,9 +37,10 @@ const routes: Routes = [
   declarations: [ListComponent, FormComponent],
   imports: [
     CommonModule,
+    ReactiveFormsModule,
     MatListModule, MatButtonModule, MatIconModule,
     MatFormFieldModule, MatSelectModule, MatInputModule,
-    MatCheckboxModule,
+    MatCheckboxModule, MatSnackBarModule, MatProgressSpinnerModule,
     RouterModule.forChild(routes),
   ]
 })

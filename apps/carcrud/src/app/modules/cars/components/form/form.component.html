@@ -1,12 +1,12 @@
-<form action="">
+<form (ngSubmit)="save()" [formGroup]="form">
   <mat-form-field appearance="fill">
     <mat-label>Veiculo</mat-label>
-    <input matInput>
+    <input formControlName="veiculo" matInput>
   </mat-form-field>
   <br>
   <mat-form-field appearance="fill">
     <mat-label>Marca</mat-label>
-    <mat-select>
+    <mat-select formControlName="marca">
       <mat-option *ngFor="let brand of brands" [value]="brand">{{brand}}</mat-option>
     </mat-select>
   </mat-form-field>
@@ -14,7 +14,7 @@
   <br>
   <mat-form-field appearance="fill">
     <mat-label>Ano</mat-label>
-    <mat-select>
+    <mat-select formControlName="ano">
       <mat-option *ngFor="let year of years" [value]="year">{{year}}</mat-option>
     </mat-select>
   </mat-form-field>
@@ -22,9 +22,17 @@
   <br>
   <mat-form-field appearance="fill">
     <mat-label>Descrição</mat-label>
-    <textarea matInput></textarea>
+    <textarea formControlName="descricao" matInput></textarea>
   </mat-form-field>
 
   <br>
-  <mat-checkbox>Vendido</mat-checkbox>
+  <mat-checkbox formControlName="vendido">Vendido</mat-checkbox>
+
+  <br>
+  <button mat-stroked-button color="primary">Salvar</button>
 </form>
+
+
+<div [class.isLoading]="isLoading">
+  <mat-spinner></mat-spinner>
+</div>

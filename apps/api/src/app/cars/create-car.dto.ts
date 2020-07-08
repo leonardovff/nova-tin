@@ -15,10 +15,4 @@ export class CreateCarDto {
 
   @IsBoolean()
   readonly vendido: boolean;
-
-  @IsString()
-  readonly created: string;
-
-  @IsString()
-  readonly updated: string;
 }

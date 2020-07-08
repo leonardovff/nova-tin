@@ -5,6 +5,6 @@ export class Car {
   ano: number;
   descricao: string;
   vendido: boolean;
-  created: string;
-  updated: string;
+  created?: string;
+  updated?: string;
 }
