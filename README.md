@@ -1,4 +1,4 @@
-# Teste innova tin
+# Simple CRUD in Angular, Nest.js, Nx Cli
 
 This project was generated using [Nx](https://nx.dev).
 🔎 **Nx is a set of Extensible Dev Tools for Monorepos.**
